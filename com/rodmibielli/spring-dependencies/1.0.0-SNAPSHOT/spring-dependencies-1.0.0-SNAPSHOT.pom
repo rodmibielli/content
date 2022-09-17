@@ -11,22 +11,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <name>BOM (Bill of Materials)</name>
   <description>Bill of Materials</description>
 
-  <parent>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-starter-parent</artifactId>
-	<version>2.7.3</version>
-  </parent>
-  
   	<properties>
 	    <junit.version>5.7.2</junit.version>
-	    <caelum.stella.version>2.1.5</caelum.stella.version>
   	    <jmolecules-bom.version>2021.2.3</jmolecules-bom.version>
   	    <hibernate.jpa.version>1.0.2.Final</hibernate.jpa.version>
   	    <springdoc-openapi.version>1.6.7</springdoc-openapi.version>
-  	    <cds.security.version>1.2.3</cds.security.version>
   	    <spring-native.version>0.11.5</spring-native.version>
 	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	    <java.version>8</java.version>
 	</properties>
    
 	<dependencyManagement>
@@ -102,18 +93,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		    <version>1.2</version>
 		</dependency>
 
-		<dependency>
-		    <groupId>br.com.caelum.stella</groupId>
-		    <artifactId>caelum-stella-core</artifactId>
-		    <version>${caelum.stella.version}</version>
-		</dependency>
-		
-		<dependency>
-		    <groupId>br.com.caelum.stella</groupId>
-		    <artifactId>caelum-stella-bean-validation</artifactId>
-		    <version>${caelum.stella.version}</version>
-		</dependency>
-		
 		<dependency>
 		    <groupId>org.junit.jupiter</groupId>
 		    <artifactId>junit-jupiter-engine</artifactId>
@@ -270,18 +249,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		    <artifactId>commons-io</artifactId>
 		    <version>2.11.0</version>
 		</dependency>
-		
-	      <dependency>
-		    <groupId>br.impa.cds.security</groupId>
-			<artifactId>obmep-security-spring-boot-starter</artifactId>
-		     <version>${cds.security.version}</version>
-	      </dependency>
-
-	      <dependency>
-		    <groupId>br.impa.cds.security</groupId>
-			<artifactId>obmepapi-security-spring-boot-starter</artifactId>
-		     <version>1.0.0</version>
-	      </dependency>
 	      
 		<dependency>
 			<groupId>org.springframework.experimental</groupId>
@@ -321,28 +288,6 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 				</configuration>
 			</plugin>
 		    
-			<plugin>
-			    <groupId>org.apache.maven.plugins</groupId>
-			    <artifactId>maven-compiler-plugin</artifactId>
-			    <configuration>
-			      <source>${java.version}</source>
-		              <target>${java.version}</target>
-			    </configuration>
-			</plugin>
-			
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				 <configuration>
-				    <excludes>
-				        <exclude>
-				            <groupId>org.projectlombok</groupId>
-				            <artifactId>lombok</artifactId>
-				        </exclude>
-				    </excludes>
-		                </configuration>
-			</plugin>
-			
 			<plugin>
 				<groupId>net.revelc.code.formatter</groupId>
 				<artifactId>formatter-maven-plugin</artifactId>
@@ -529,6 +474,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 	</pluginManagement>
 	
 	</build>   
+	<!--
 	<repositories>
 		<repository>
 			<id>spring-release</id>
@@ -543,5 +489,5 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 			<url>https://repo.spring.io/release</url>
 		</pluginRepository>
 	</pluginRepositories>
-  
+  -->
 </project>
