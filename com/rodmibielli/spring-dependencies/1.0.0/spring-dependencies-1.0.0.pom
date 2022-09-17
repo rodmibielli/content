@@ -1,0 +1,547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.rodmibielli</groupId>
+  <artifactId>spring-dependencies</artifactId>
+  <version>1.0.0</version>
+  <packaging>pom</packaging>
+
+  <name>BOM (Bill of Materials)</name>
+  <description>Bill of Materials</description>
+
+  <parent>
+	<groupId>org.springframework.boot</groupId>
+	<artifactId>spring-boot-starter-parent</artifactId>
+	<version>2.7.3</version>
+  </parent>
+  
+  	<properties>
+	    <junit.version>5.7.2</junit.version>
+	    <caelum.stella.version>2.1.5</caelum.stella.version>
+  	    <jmolecules-bom.version>2021.2.3</jmolecules-bom.version>
+  	    <hibernate.jpa.version>1.0.2.Final</hibernate.jpa.version>
+  	    <springdoc-openapi.version>1.6.7</springdoc-openapi.version>
+  	    <cds.security.version>1.2.3</cds.security.version>
+  	    <spring-native.version>0.11.5</spring-native.version>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    <java.version>8</java.version>
+	</properties>
+   
+	<dependencyManagement>
+	  <dependencies>
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-dependencies</artifactId>
+			<version>2021.0.4</version>
+			<type>pom</type>
+			<scope>import</scope>
+		</dependency>
+		
+		<dependency>
+		    <groupId>javax.servlet</groupId>
+		    <artifactId>servlet-api</artifactId>
+		    <version>4.0.1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.jmolecules</groupId>
+			<artifactId>jmolecules-bom</artifactId>
+			<version>${jmolecules-bom.version}</version>
+			<scope>import</scope>
+			<type>pom</type>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.hibernate.javax.persistence</groupId>
+		    <artifactId>hibernate-jpa-2.1-api</artifactId>
+		    <version>${hibernate.jpa.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.vladmihalcea</groupId>
+		    <artifactId>hibernate-types-55</artifactId>
+		    <version>2.14.0</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-annotations -->
+		<dependency>
+		    <groupId>org.hibernate</groupId>
+		    <artifactId>hibernate-annotations</artifactId>
+		    <version>3.5.6-Final</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springdoc</groupId>
+		    <artifactId>springdoc-openapi-ui</artifactId>
+		    <version>${springdoc-openapi.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.springdoc</groupId>
+		    <artifactId>springdoc-openapi-common</artifactId>
+		    <version>${springdoc-openapi.version}</version>
+		</dependency>
+		
+		<dependency>
+		      <groupId>org.springdoc</groupId>
+		      <artifactId>springdoc-openapi-security</artifactId>
+		      <version>1.6.7</version>
+	        </dependency>
+		
+		<dependency>
+		    <groupId>io.swagger.core.v3</groupId>
+		    <artifactId>swagger-core</artifactId>
+		    <version>2.1.13</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>commons-logging</groupId>
+		    <artifactId>commons-logging</artifactId>
+		    <version>1.2</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>br.com.caelum.stella</groupId>
+		    <artifactId>caelum-stella-core</artifactId>
+		    <version>${caelum.stella.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>br.com.caelum.stella</groupId>
+		    <artifactId>caelum-stella-bean-validation</artifactId>
+		    <version>${caelum.stella.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-engine</artifactId>
+		    <version>${junit.version}</version>
+		</dependency>
+	
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-params</artifactId>
+		    <version>${junit.version}</version>
+		</dependency>
+	
+		<dependency>
+		    <groupId>org.mockito</groupId>
+		    <artifactId>mockito-junit-jupiter</artifactId>
+		    <version>3.12.4</version>
+		</dependency>
+    
+		<dependency>
+		    <groupId>org.assertj</groupId>
+		    <artifactId>assertj-core</artifactId>
+		    <version>3.20.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>junit</groupId>
+		    <artifactId>junit</artifactId>
+		    <version>4.13.2</version>
+		</dependency>
+		
+		 <dependency>
+		    <groupId>javax.inject</groupId>
+		    <artifactId>javax.inject</artifactId>
+		    <version>1</version>
+		 </dependency>
+		 
+		<dependency>
+		  <groupId>com.google.guava</groupId>
+		  <artifactId>guava</artifactId>
+		  <version>31.1-jre</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>org.powermock</groupId>
+		    <artifactId>powermock-api-mockito</artifactId>
+		    <version>1.7.4</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>pl.pragmatists</groupId>
+		    <artifactId>JUnitParams</artifactId>
+		    <version>1.1.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.natpryce</groupId>
+		    <artifactId>make-it-easy</artifactId>
+		    <version>4.0.1</version>
+		</dependency>
+		
+		<dependency>
+		   <groupId>com.massisframework</groupId>
+		   <artifactId>j-text-utils</artifactId>
+		   <version>0.3.4</version>
+		</dependency>
+		
+		
+	        <dependency>
+		  <groupId>org.hibernate</groupId>
+		  <artifactId>hibernate-validator</artifactId>
+		  <version>6.2.3.Final</version>
+	       </dependency>
+		
+	        <dependency>
+		    <groupId>javax.el</groupId>
+		    <artifactId>javax.el-api</artifactId>
+	 	    <version>3.0.0</version>
+	        </dependency>
+	        
+		<dependency>
+		    <groupId>org.glassfish.web</groupId>
+		    <artifactId>javax.el</artifactId>
+		    <version>2.2.6</version>
+		 </dependency>
+		 
+		    <dependency>
+		      <groupId>org.apache.commons</groupId>
+		      <artifactId>commons-collections4</artifactId>
+		    <version>4.4</version>
+		    </dependency>
+	        
+		<dependency>
+		  <groupId>com.sun.xml.bind</groupId>
+		  <artifactId>jaxb-impl</artifactId>
+	         <version>3.0.2</version>
+	       </dependency>
+	        
+		<dependency>
+		    <groupId>ma.glasnost.orika</groupId>
+		    <artifactId>orika-core</artifactId>
+		    <version>1.5.4</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.apache.velocity</groupId>
+		    <artifactId>velocity</artifactId>
+		    <version>1.7</version>
+		</dependency>
+	        
+	    	<dependency>
+		   <groupId>org.apache.commons</groupId>
+		   <artifactId>commons-math3</artifactId>
+		   <version>3.6.1</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>net.rakugakibox.spring.boot</groupId>
+		    <artifactId>orika-spring-boot-starter</artifactId>
+		    <version>1.9.0</version>
+		</dependency>
+	        
+		<dependency>
+		    <groupId>org.powermock</groupId>
+		    <artifactId>powermock-api-mockito2</artifactId>
+		    <version>2.0.9</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>joda-time</groupId>
+		    <artifactId>joda-time</artifactId>
+		    <version>2.10.13</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.github.jmnarloch</groupId>
+		    <artifactId>modelmapper-spring-boot-starter</artifactId>
+		    <version>1.1.0</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>commons-beanutils</groupId>
+		    <artifactId>commons-beanutils</artifactId>
+		    <version>1.9.4</version>
+		</dependency>
+		
+	    <dependency>
+		<groupId>org.apache.shiro</groupId>
+		<artifactId>shiro-core</artifactId>
+		<version>1.9.0</version>
+	    </dependency>
+	    
+		<dependency>
+		    <groupId>commons-io</groupId>
+		    <artifactId>commons-io</artifactId>
+		    <version>2.11.0</version>
+		</dependency>
+		
+	      <dependency>
+		    <groupId>br.impa.cds.security</groupId>
+			<artifactId>obmep-security-spring-boot-starter</artifactId>
+		     <version>${cds.security.version}</version>
+	      </dependency>
+
+	      <dependency>
+		    <groupId>br.impa.cds.security</groupId>
+			<artifactId>obmepapi-security-spring-boot-starter</artifactId>
+		     <version>1.0.0</version>
+	      </dependency>
+	      
+		<dependency>
+			<groupId>org.springframework.experimental</groupId>
+			<artifactId>spring-native</artifactId>
+			<version>${spring-native.version}</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.h2database</groupId>
+		    <artifactId>h2</artifactId>
+		    <version>2.1.212</version>
+		</dependency>
+		
+   	 </dependencies>
+   	 
+	</dependencyManagement>
+	
+	<build>
+	
+        <resources>
+           <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+
+	<pluginManagement>
+		    <plugins>
+		    
+			<plugin>
+				<groupId>io.snyk</groupId>
+				<artifactId>snyk-maven-plugin</artifactId>
+				<version>2.0.0</version>
+				<inherited>false</inherited>
+				<configuration>
+					<apiToken>${env.SNYK_TOKEN}</apiToken>
+				</configuration>
+			</plugin>
+		    
+			<plugin>
+			    <groupId>org.apache.maven.plugins</groupId>
+			    <artifactId>maven-compiler-plugin</artifactId>
+			    <configuration>
+			      <source>${java.version}</source>
+		              <target>${java.version}</target>
+			    </configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				 <configuration>
+				    <excludes>
+				        <exclude>
+				            <groupId>org.projectlombok</groupId>
+				            <artifactId>lombok</artifactId>
+				        </exclude>
+				    </excludes>
+		                </configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>net.revelc.code.formatter</groupId>
+				<artifactId>formatter-maven-plugin</artifactId>
+				<version>2.19.0</version>
+				 <configuration>
+				    <directories>
+				      <directory>${project.build.sourceDirectory}</directory>
+				      <directory>${project.build.directory}/generated-sources</directory>
+				    </directories>
+				</configuration>
+  			</plugin>
+			
+			
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+			</plugin>
+		     <plugin>
+		        <groupId>org.apache.maven.plugins</groupId>
+		        <artifactId>maven-jar-plugin</artifactId>
+		        <executions>
+		          <execution>
+		            <goals>
+		              <goal>test-jar</goal>
+		            </goals>
+		          </execution>
+		        </executions>
+		   	</plugin>
+		 	<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+				   <trimStackTrace>false</trimStackTrace>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-failsafe-plugin</artifactId>
+			</plugin>
+			<plugin>
+			    <groupId>org.springframework.experimental</groupId>
+			    <artifactId>spring-aot-maven-plugin</artifactId>
+			    <version>${spring-native.version}</version>
+	              </plugin>
+			<plugin>
+				<groupId>org.graalvm.nativeimage</groupId>
+				<artifactId>native-image-maven-plugin</artifactId>
+				<version>21.2.0</version>
+				<extensions>true</extensions>
+			</plugin>
+	              
+            <!-- Source generation plugin on deploy -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                        <configuration>
+                            <links>
+                                <link>
+                                    http://java.sun.com/javase/13/docs/api/
+                                </link>
+                            </links>
+                            <encoding>${project.build.sourceEncoding}</encoding>
+                            <charset>${project.build.sourceEncoding}</charset>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- Javadoc generation plugin on deploy -->
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                           <failOnError>false</failOnError>
+                            <links>
+                                <link>
+                                    http://java.sun.com/javase/8/docs/api/
+                                </link>
+                            </links>
+                            <encoding>${project.build.sourceEncoding}</encoding>
+                            <charset>${project.build.sourceEncoding}</charset>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <plugin>
+                <!-- explicitly define maven-deploy-plugin after other to force exec order -->
+                <artifactId>maven-deploy-plugin</artifactId>
+                <configuration>
+                    <skip>false</skip>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>deploy</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>3.1.0</version>
+                <configuration>
+                    <delimiters>
+                        <delimiter>@</delimiter>
+                    </delimiters>
+                    <useDefaultDelimiters>false</useDefaultDelimiters>
+                </configuration>
+            </plugin>
+            
+            <!-- JQAssistant for JMolecules -->
+    	    <plugin>
+		    <groupId>com.buschmais.jqassistant</groupId>
+		    <artifactId>jqassistant-maven-plugin</artifactId>
+		    <version>1.11.1</version>
+		    <dependencies>
+			<dependency>
+			    <groupId>org.jqassistant.contrib.plugin</groupId>
+			    <artifactId>jqassistant-jmolecules-plugin</artifactId>
+			    <version>1.4.0</version>
+			</dependency>
+		    </dependencies>
+	    </plugin>
+	    
+    	    <plugin>
+		<groupId>net.bytebuddy</groupId>
+		<artifactId>byte-buddy-maven-plugin</artifactId>
+		<version>1.12.8</version>
+		<dependencies>
+			<dependency>
+				<groupId>org.jmolecules.integrations</groupId>
+				<artifactId>jmolecules-bytebuddy</artifactId>
+				<version>0.8.0</version>
+			</dependency>
+		</dependencies>
+	    </plugin>
+	    
+	       <plugin>
+		 <groupId>com.querydsl</groupId>
+		 <artifactId>querydsl-maven-plugin</artifactId>
+		 <executions>
+		   <execution>
+		   <phase>generate-sources</phase>    
+		     <goals>
+		       <goal>jpa-export</goal>
+		     </goals>
+		     <configuration>
+		       <targetFolder>target/generated-sources/java</targetFolder>
+		     </configuration>   
+		   </execution>
+		 </executions>
+		 <dependencies>
+		      <dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.1-api</artifactId>
+			<version>${hibernate.jpa.version}</version>
+		      </dependency>
+		    </dependencies>                         
+	       </plugin>                                       
+
+		<plugin>
+		    <groupId>com.dkanejs.maven.plugins</groupId>
+		    <artifactId>docker-compose-maven-plugin</artifactId>
+		    <version>4.0.0</version>
+		</plugin>
+
+	    </plugins>
+	</pluginManagement>
+	
+	</build>   
+	<repositories>
+		<repository>
+			<id>spring-release</id>
+			<name>Spring release</name>
+			<url>https://repo.spring.io/release</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>spring-release</id>
+			<name>Spring release</name>
+			<url>https://repo.spring.io/release</url>
+		</pluginRepository>
+	</pluginRepositories>
+  
+</project>
