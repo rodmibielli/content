@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.rodmibielli</groupId>
+  <artifactId>spring-dependencies</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20220917092620</lastUpdated>
+  </versioning>
+</metadata>
